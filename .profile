@@ -41,6 +41,10 @@ function gco() {
 	git checkout "$@";
 }
 
+function gd() {
+	git diff "$@";
+}
+
 function ll() {
 	ls -la "$@";
 }
