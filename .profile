@@ -3,10 +3,11 @@ export PS1="------------------------------------------------\n[$USER@$HOSTNAME] 
 export SVN_EDITOR=vi
 export GIT_JT_HOME=~/repositories/javatools
 export JAVA_HOME=$(/usr/libexec/java_home)
+export ANDROID_HOME=/Users/ross/Library/Android/sdk
 export M2_HOME=/users/ross/opt/apache-maven-3.5.4
 export ANT_HOME=~/opt/apache-ant-1.9.7
 export VSC_HOME="/Applications/Visual Studio Code.app/Contents/Resources/app"
-export PATH=/Users/ross/bin:$M2_HOME/bin:$ANT_HOME/bin:$VSC_HOME/bin:$PATH
+export PATH=/Users/ross/bin:$M2_HOME/bin:$ANT_HOME/bin:$VSC_HOME/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$PATH
 
 alias gs="git status"
 alias cls="clear"
