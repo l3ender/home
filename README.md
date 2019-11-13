@@ -16,3 +16,7 @@ It's primarily used for a Mac system.
     ```bash
     git update-index --assume-unchanged .ssh/config
     ```
+
+### Updates
+
+Files are excluded by default (see `.gitignore`). If there's a new file that should be tracked, the `.gitignore` file will need to be updated before you will be able to add it.

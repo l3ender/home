@@ -3,5 +3,6 @@
 !.gitignore
 !.profile
 !.ssh/
+!.exrc
 !README.md
 
