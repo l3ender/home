@@ -10,6 +10,7 @@ It's primarily used for a Mac system.
     ```bash
     git init .
     git remote add origin <repository-url>
+    git fetch --all --tags --prune
     git checkout master
     ```
 2. Ignore changes to `.ssh/config` ([credit](https://stackoverflow.com/a/10755704/1880761)):
