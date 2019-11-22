@@ -9,6 +9,9 @@ export ANT_HOME=~/opt/apache-ant-1.9.7
 export VSC_HOME="/Applications/Visual Studio Code.app/Contents/Resources/app"
 export PATH=/Users/ross/bin:$M2_HOME/bin:$ANT_HOME/bin:$VSC_HOME/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:~/go/bin:$PATH
 export BASH_SILENCE_DEPRECATION_WARNING=1
+if [ -f ~/.profile-private ]; then
+	. ~/.profile-private
+fi
 
 alias gs="git status"
 alias cls="clear"
