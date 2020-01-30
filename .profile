@@ -1,7 +1,6 @@
 export PS1="------------------------------------------------\n[$USER@$HOSTNAME] \w\n-> "
 
 export SVN_EDITOR=vi
-export GIT_JT_HOME=~/repositories/javatools
 export JAVA_HOME=$(/usr/libexec/java_home)
 export ANDROID_HOME=~/Library/Android/sdk
 export M2_HOME=~/opt/apache-maven-3.6.3
