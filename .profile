@@ -6,8 +6,12 @@ export ANDROID_HOME=~/Library/Android/sdk
 export M2_HOME=~/opt/apache-maven-3.6.3
 export ANT_HOME=~/opt/apache-ant-1.9.7
 export VSC_HOME="/Applications/Visual Studio Code.app/Contents/Resources/app"
-export PATH=~/bin:$M2_HOME/bin:$ANT_HOME/bin:$VSC_HOME/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:~/go/bin:$PATH
+export PYTHON_HOME=~/Library/Python/3.7
+export PATH=~/bin:$M2_HOME/bin:$ANT_HOME/bin:$VSC_HOME/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:~/go/bin:$PYTHON_HOME/bin:$PATH
 export BASH_SILENCE_DEPRECATION_WARNING=1
+export HISTSIZE=
+export HISTFILESIZE=
+export HISTTIMEFORMAT="%F %T: "
 if [ -f ~/.profile-private ]; then
 	. ~/.profile-private
 fi
