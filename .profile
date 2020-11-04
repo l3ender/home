@@ -61,7 +61,6 @@ function ll() {
 }
 
 function cc() {
-	cd "$1";
-	ll;
+	cd "$1" && ll;
 }
 
