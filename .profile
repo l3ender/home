@@ -10,6 +10,7 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 export HISTSIZE=
 export HISTFILESIZE=
 export HISTTIMEFORMAT="%F %T: "
+export PROMPT_COMMAND='echo -ne "\033]0;$PWD\007"'
 if [ -f ~/.profile-private ]; then
 	. ~/.profile-private
 fi
