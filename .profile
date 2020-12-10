@@ -43,8 +43,16 @@ function ga() {
 	git add "$@";
 }
 
+function gc() {
+	git commit "$@";
+}
+
+function gca() {
+	git commit --amend "$@";
+}
+
 function gcm() {
-	git commit -m "$1";
+	git commit -m "$@";
 }
 
 function gco() {
