@@ -2,7 +2,7 @@ export PS1="------------------------------------------------\n[$USER@$HOSTNAME] 
 
 export SVN_EDITOR=vi
 export JAVA_HOME=$(/usr/libexec/java_home)
-export ANDROID_HOME=~/Library/Android/sdk
+export ANDROID_SDK_ROOT=~/Library/Android/sdk
 export M2_HOME=~/opt/apache-maven-3.6.3
 export VSC_HOME="/Applications/Visual Studio Code.app/Contents/Resources/app"
 export GO111MODULE="on"
