@@ -1,7 +1,6 @@
 export PS1="------------------------------------------------\n[$USER@$HOSTNAME] \w\n-> "
 
 export SVN_EDITOR=vi
-export JAVA_HOME=$(/usr/libexec/java_home)
 export ANDROID_SDK_ROOT=~/Library/Android/sdk
 export M2_HOME=~/opt/apache-maven-3.6.3
 export VSC_HOME="/Applications/Visual Studio Code.app/Contents/Resources/app"
@@ -15,6 +14,10 @@ export PROMPT_COMMAND='echo -ne "\033]0;$PWD\007"'
 if [ -f ~/.profile-private ]; then
 	. ~/.profile-private
 fi
+
+# see https://github.com/jenv/jenv
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
 
 alias gs="git status"
 alias cls="clear"
