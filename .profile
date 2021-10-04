@@ -67,6 +67,10 @@ function gd() {
 	git diff "$@";
 }
 
+function gclone() {
+        git clone "$@" && cc $(grep -oP '\/\K([\w-]+)(?=.git)' <<< "$1")
+}
+
 function ll() {
 	ls -la "$@";
 }
