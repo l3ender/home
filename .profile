@@ -75,6 +75,14 @@ function gr() {
         git restore "$@"
 }
 
+function grs() {
+        git restore --staged "$@"
+}
+
+function grsa() {
+        git restore --staged "$@" && gr "$@"
+}
+
 function ll() {
 	ls -la "$@";
 }
