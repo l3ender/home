@@ -21,7 +21,6 @@ eval "$(jenv init -)"
 
 alias gs="git status"
 alias cls="clear"
-alias va=". venv/bin/activate"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -91,4 +90,14 @@ function ll() {
 function cc() {
 	cd "$1" && ll;
 }
+
+function va() {
+	env_name="venv"
+	if [[ -n "$1" ]] ; then
+		env_name="$1"
+	fi
+	. "$env_name/bin/activate"
+}
+
+alias vd="deactivate"
 
