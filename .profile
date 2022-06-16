@@ -15,6 +15,9 @@ if [ -f ~/.profile-private ]; then
 	. ~/.profile-private
 fi
 
+# homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # see https://github.com/jenv/jenv
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
@@ -100,4 +103,3 @@ function va() {
 }
 
 alias vd="deactivate"
-
