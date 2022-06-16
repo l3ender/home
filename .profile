@@ -68,19 +68,19 @@ function gd() {
 }
 
 function gclone() {
-        git clone "$@" && cc $(grep -oP '\/\K([\w-]+)(?=.git)' <<< "$1")
+	git clone "$@" && cc $(grep -oP '\/\K([\w-]+)(?=.git)' <<< "$1")
 }
 
 function gr() {
-        git restore "$@"
+	git restore "$@"
 }
 
 function grs() {
-        git restore --staged "$@"
+	git restore --staged "$@"
 }
 
 function grsa() {
-        git restore --staged "$@" && gr "$@"
+	git restore --staged "$@" && gr "$@"
 }
 
 function ll() {
