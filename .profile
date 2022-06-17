@@ -71,7 +71,7 @@ function gd() {
 }
 
 function gclone() {
-	git clone "$@" && cc $(grep -oP '\/\K([\w-]+)(?=.git)' <<< "$1")
+	git clone "$@" && cc $(sed 's/.*\/\(.*\)[.].*/\1/' <<< "$1")
 }
 
 function gr() {
