@@ -1,11 +1,11 @@
 export PS1="------------------------------------------------\n[$USER@$HOSTNAME] \w\n-> "
 
 export SVN_EDITOR=vi
-export ANDROID_SDK_ROOT=~/Library/Android/sdk
-export M2_HOME=~/opt/apache-maven-3.6.3
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+export M2_HOME=$HOME/opt/apache-maven-3.6.3
 export VSC_HOME="/Applications/Visual Studio Code.app/Contents/Resources/app"
 export GO111MODULE="on"
-export PATH=~/bin:$M2_HOME/bin:$VSC_HOME/bin:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/tools:$PATH
+export PATH=$HOME/bin:$M2_HOME/bin:$VSC_HOME/bin:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/tools:${PATH//\~/$HOME}
 export BASH_SILENCE_DEPRECATION_WARNING=1
 export HISTSIZE=
 export HISTFILESIZE=
@@ -87,6 +87,10 @@ function grs() {
 
 function grsa() {
 	git restore --staged "$@" && gr "$@"
+}
+
+function gl() {
+	git log "$@"
 }
 
 function ll() {
