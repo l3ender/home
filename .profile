@@ -2,7 +2,7 @@ export PS1="------------------------------------------------\n[$USER@$HOSTNAME] 
 
 export SVN_EDITOR=vi
 export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
-export M2_HOME=$HOME/opt/apache-maven-3.6.3
+export M2_HOME=$HOME/opt/apache-maven-3.9.4
 export VSC_HOME="/Applications/Visual Studio Code.app/Contents/Resources/app"
 export GO111MODULE="on"
 export PATH=$HOME/bin:$M2_HOME/bin:$VSC_HOME/bin:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/tools:${PATH//\~/$HOME}
@@ -74,7 +74,11 @@ function gd() {
 }
 
 function gclone() {
-	git clone "$@" && cc $(sed 's/.*\/\(.*\)[.].*/\1/' <<< "$1")
+	if [[ $# -eq 2 ]]; then
+		git clone "$@" && cc "$2"
+	else
+		git clone "$@" && cc $(sed 's/.*\/\(.*\)[.].*/\1/' <<< "$1")
+	fi
 }
 
 function gr() {
