@@ -10,6 +10,7 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 export HISTSIZE=
 export HISTFILESIZE=
 export HISTTIMEFORMAT="%F %T: "
+export HISTCONTROL="ignoreboth"
 export PROMPT_COMMAND='echo -ne "\033]0;$PWD\007"'
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES # https://stackoverflow.com/a/52230415/1880761
 export GROOVY_HOME=/opt/homebrew/opt/groovy/libexec
