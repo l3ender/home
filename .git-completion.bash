@@ -3057,6 +3057,7 @@ __git_complete gb _git_branch
 __git_complete gs _git_status
 __git_complete ga _git_add
 __git_complete gd _git_diff
+__git_complete gl _git_log
 
 # The following are necessary only for Cygwin, and only are needed
 # when the user has tab-completed the executable name and consequently
