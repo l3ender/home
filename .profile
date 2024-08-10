@@ -5,7 +5,10 @@ export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
 export M2_HOME=$HOME/opt/apache-maven-3.9.4
 export VSC_HOME="/Applications/Visual Studio Code.app/Contents/Resources/app"
 export GO111MODULE="on"
-export PATH=$HOME/bin:$M2_HOME/bin:$VSC_HOME/bin:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/tools:${PATH//\~/$HOME}
+# homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+USER_PATH="$HOME/bin:$M2_HOME/bin:$VSC_HOME/bin:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/tools"
+export PATH="$USER_PATH:$(brew --prefix python)/libexec/bin:${PATH//\~/$HOME}"
 export BASH_SILENCE_DEPRECATION_WARNING=1
 export HISTSIZE=
 export HISTFILESIZE=
@@ -19,8 +22,6 @@ if [ -f ~/.profile-private ]; then
 	. ~/.profile-private
 fi
 
-# homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # see https://github.com/jenv/jenv
 export PATH="$HOME/.jenv/bin:$PATH"
