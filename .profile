@@ -37,16 +37,6 @@ if [ -f ~/.git-completion.bash ]; then
 	. ~/.git-completion.bash
 fi
 
-function baudns() {
-	read -n1 -r -p "Enter Ctrl+A followed by Ctrl+\ to when finished to console. Press any key to continue" key
-	screen /dev/tty.KeySerial1 9600 *N1
-}
-
-function bauddp() {
-	read -n1 -r -p "Enter Ctrl+A followed by Ctrl+\ to when finished to console. Press any key to continue" key
-	screen /dev/tty.usbserial 9600 *N1
-}
-
 function gb() {
 	git branch "$@";
 }
