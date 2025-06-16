@@ -8,7 +8,7 @@ export GO111MODULE="on"
 # homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 USER_PATH="$HOME/bin:$M2_HOME/bin:$VSC_HOME/bin:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/tools"
-export PATH="$USER_PATH:$(brew --prefix python)/libexec/bin:${PATH//\~/$HOME}"
+export PATH="$USER_PATH:$(brew --prefix)/opt/python@3.12/libexec/bin:${PATH//\~/$HOME}"
 export BASH_SILENCE_DEPRECATION_WARNING=1
 export HISTSIZE=
 export HISTFILESIZE=
